@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" styleClass="gray-background" stylesheets="@../css/stylemess.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AfisareCereriController">
+   <center>
+      <AnchorPane prefHeight="549.0" prefWidth="667.0" stylesheets="@../css/prstyle.css">
+          <children>
+              <SplitPane dividerPositions="0.6892138939670932" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="386.0" prefWidth="666.0">
+                          <children>
+                              <SplitPane prefHeight="374.0" prefWidth="666.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                  <items>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="797.0">
+                                          <children>
+                                              <TableView fx:id="tableView" layoutY="64.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="236.0" prefWidth="797.0" AnchorPane.bottomAnchor="73.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="64.0">
+                                                  <columns>
+                                                      <TableColumn fx:id="tableColumnId" prefWidth="75.0" text="Id" />
+                                                      <TableColumn fx:id="tableColumnFrom" prefWidth="75.0" text="From" />
+                                                      <TableColumn fx:id="tableColumnTo" prefWidth="75.0" text="To" />
+                                                      <TableColumn fx:id="tableColumnStatus" prefWidth="75.0" text="Status" />
+                                                      <TableColumn fx:id="tableColumnData" prefWidth="75.0" text="Data" />
+                                                  </columns>
+                                                  <columnResizePolicy>
+                                                      <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                  </columnResizePolicy>
+                                              </TableView>
+                                    <Label layoutX="284.0" layoutY="14.0" text="Friend Requests">
+                                       <font>
+                                          <Font name="Century" size="30.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="nextButton" layoutX="424.0" layoutY="320.0" mnemonicParsing="false" onAction="#handleNextButton" styleClass="gray-background" text="Next">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <Button fx:id="backButton" layoutX="321.0" layoutY="320.0" mnemonicParsing="false" onAction="#handleBackButton" styleClass="gray-background" text="Back">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <Label fx:id="pageNumberLabel" layoutX="393.0" layoutY="319.0" text="1">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                          </children>
+                                      </AnchorPane>
+                                  </items>
+                              </SplitPane>
+                          </children>
+                      </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="188.0" prefWidth="798.0">
+                          <children>
+                              <Button fx:id="deleteRequestButton" layoutX="322.0" layoutY="14.0" mnemonicParsing="false" onAction="#stergeCererea" prefHeight="31.0" prefWidth="154.0" styleClass="gray-background" text="Delete Request">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="approveButton" layoutX="322.0" layoutY="64.0" mnemonicParsing="false" onAction="#approveRequest" prefHeight="31.0" prefWidth="154.0" styleClass="gray-background" text="Approve">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="rejectButton" layoutX="322.0" layoutY="114.0" mnemonicParsing="false" onAction="#rejectRequest" prefHeight="31.0" prefWidth="154.0" styleClass="gray-background" text="Reject">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                          </children>
+                  </AnchorPane>
+                  </items>
+              </SplitPane>
+          </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <HBox prefHeight="50.0" prefWidth="800.0" styleClass="gray-background" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="homeButton" mnemonicParsing="false" onAction="#handleHomeButton" prefHeight="48.0" prefWidth="133.0" styleClass="gray-background" text="Home">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="messengerButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleMessengerButton" prefHeight="48.0" prefWidth="133.0" styleClass="gray-background" text="Messenger">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="friendsButton" layoutX="144.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleFriendsButton" prefHeight="48.0" prefWidth="133.0" styleClass="gray-background" text="Friends">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="friendRequestsButton" layoutX="277.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleFriendRequestsButton" prefHeight="48.0" prefWidth="160.0" styleClass="gray-background" text="Friend Requests">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="reportsButton" layoutX="411.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleReportsButton" prefHeight="48.0" prefWidth="120.0" styleClass="gray-background" text="Reports">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="eventsButton" layoutX="544.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleEventsButton" prefHeight="48.0" prefWidth="118.0" styleClass="gray-background" text="Events">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>

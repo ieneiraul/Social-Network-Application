@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="gray-background" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EventsController">
+   <top>
+      <HBox prefHeight="50.0" prefWidth="800.0" styleClass="gray-background" stylesheets="@../css/stylemess.css" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="homeButton" mnemonicParsing="false" onAction="#handleHomeButton" prefHeight="48.0" prefWidth="133.0" styleClass="gray-background" text="Home">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="messengerButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleMessengerButton" prefHeight="48.0" prefWidth="133.0" styleClass="gray-background" text="Messenger">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="friendsButton" layoutX="144.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleFriendsButton" prefHeight="48.0" prefWidth="133.0" styleClass="gray-background" text="Friends">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="friendRequestsButton" layoutX="277.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleFriendRequestsButton" prefHeight="48.0" prefWidth="160.0" styleClass="gray-background" text="Friend Requests">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="reportsButton" layoutX="411.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleReportsButton" prefHeight="48.0" prefWidth="120.0" styleClass="gray-background" text="Reports">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="eventsButton" layoutX="544.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleEventsButton" prefHeight="48.0" prefWidth="118.0" styleClass="gray-background" text="Events">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" stylesheets="@../css/stylemess.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="318.0" layoutY="31.0" text="Active Events">
+               <font>
+                  <Font name="Century" size="24.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tableView" layoutY="71.0" prefHeight="180.0" prefWidth="800.0" styleClass="gray-background">
+              <columns>
+                <TableColumn fx:id="tableColumnId" prefWidth="50.399993896484375" text="ID" />
+                <TableColumn fx:id="tableColumnCreat" prefWidth="116.0" text="Creat de" />
+                  <TableColumn fx:id="tableColumnNume" prefWidth="167.20001220703125" text="Nume" />
+                  <TableColumn fx:id="tableColumnDescriere" prefWidth="315.199951171875" text="Descriere" />
+                  <TableColumn fx:id="tableColumnData" minWidth="0.0" prefWidth="152.00006103515625" text="Data incepere" />
+              </columns>
+            </TableView>
+            <Button fx:id="backButton" layoutX="320.0" layoutY="269.0" mnemonicParsing="false" onAction="#handleBackButton" styleClass="gray-background" text="Back">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="nextButton" layoutX="423.0" layoutY="269.0" mnemonicParsing="false" onAction="#handleNextButton" styleClass="gray-background" text="Next">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="pageNumberLabel" layoutX="390.0" layoutY="270.0" text="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="joinEventButton" layoutX="320.0" layoutY="315.0" mnemonicParsing="false" onAction="#handleJoinEventButton" prefHeight="39.0" prefWidth="159.0" styleClass="gray-background" text="Join event">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="316.0" layoutY="380.0" text="Create an event">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="dataDatePicker" layoutX="64.0" layoutY="433.0" prefHeight="26.0" prefWidth="239.0" promptText="Data evenimentului" />
+            <TextField fx:id="numeTextField" layoutX="64.0" layoutY="489.0" prefHeight="30.0" prefWidth="240.0" promptText="Numele evenimentului">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextArea fx:id="descriereTextArea" layoutX="340.0" layoutY="433.0" prefHeight="94.0" prefWidth="240.0" promptText="Descrierea evenimentului">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextArea>
+            <Button fx:id="createButton" layoutX="611.0" layoutY="433.0" mnemonicParsing="false" onAction="#handleCreateButton" prefHeight="95.0" prefWidth="109.0" styleClass="gray-background" text="Create">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

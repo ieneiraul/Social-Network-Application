@@ -1,0 +1,31 @@
+/*.button {
+    -fx-text-fill: DarkBlue	;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#1affff, #809fff);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+.label {
+    -fx-font-size: 16px;
+    /*-fx-font-weight:bold;*/
+    /*-fx-background-color:  #ccf2ff;
+
+    -fx-text-fill:   #1a8cff;
+}
+.table-row-cell:selected {
+    -fx-background-color: #66ffb3;
+
+
+}
+.table-row-cell:selected .text {
+
+    -fx-fill:  #00331a;
+}
+
+/*.text{*/
+/*    -fx-fill: #0000e6;*/
+/*}
+.table-view{
+    -fx-background-color:   #636566;
+    -fx-font-size: 16px;
+}*/
